@@ -1,87 +1,67 @@
-## Getting Started
+Getting Started
+Clone the repository: git clone https://github.com/vimper007/CodeWithKrish.git
 
-  
+Navigate to the project directory: cd CodeWithKrish\node-js-practical\api-server
 
-1. Clone the repository: **git clone https://github.com/vimper007/CodeWithKrish.git**
+Install the required dependencies: npm install
 
-2. Navigate to the project directory: **cd CodeWithKrish\node-js-practical\api-server**
+Start the server: node index.js
 
-3. Install the required dependencies: **npm install**
+The server will be running on http://localhost:3000.
 
-4. Start the server: **node index.js**
+Utility Functions
+The util.js file exports the following functions:
 
-5. The server will be running on `http://localhost:3000`.
+findMin(num1, num2): Returns the minimum of two numbers.
 
-## Utility Functions
+findMax(num1, num2): Returns the maximum of two numbers.
 
-The `util.js` file exports the following functions:
+findAvg(numbers): Calculates and returns the average of an array of numbers.
 
--  **findMin(num1, num2)**: Returns the minimum of two numbers.
+sortArray(numbers, type): Sorts an array of numbers in ascending or descending order based on the specified type.
 
--  **findMax(num1, num2)**: Returns the maximum of two numbers.
+findValue(values, search): Counts the occurrences of a specific value in an array.
 
--  **findAvg(numbers)**: Calculates and returns the average of an array of numbers.
+API Endpoints
+The api-server/index.js file sets up the following routes:
 
--  **sortArray(numbers, type)**: Sorts an array of numbers in ascending or descending order based on the specified type.
+GET /: Returns a greeting message.
 
--  **findValue(values, search)**: Counts the occurrences of a specific value in an array.
+GET /number/min: Returns the minimum of two numbers.
 
-  
+Query parameters: num1, num2
 
-## API Endpoints
+Ex: /number/min?num1=1&num2=2
 
-  
+GET /number/max: Returns the maximum of two numbers.
 
-The `api-server/index.js` file sets up the following routes:
+Query parameters: num1, num2
 
-  
+Ex: /number/max?num1=1&num2=2
 
-**GET /**: Returns a greeting message.
+GET /number/avg: Returns the average of a list of numbers.
 
-  
+Query parameter: numbers (comma-separated list)
 
-**GET /number/min**: Returns the minimum of two numbers.
+Ex: /number/avg?numbers=1,2,3,4,5,6,6…n
 
-Query parameters: `num1`, `num2`
+GET /number/sort: Sorts a list of numbers.
 
-> Ex: /number/min?num1=1&num2=2
+Query parameters: numbers (comma-separated list), type (asc|desc)
 
-  
+Ex: /number/sort?numbers=1,2,3,4,5,6…n&type=asc
 
-**GET /number/max**: Returns the maximum of two numbers.
+Ex: /number/sort?numbers=1,2,3,4,5,6…n&type=dsc
 
-Query parameters: `num1`, `num2`
+GET /number/count: Counts occurrences of a specific value in a list.
 
-> Ex: /number/max?num1=1&num2=2
+Query parameters: values (comma-separated list), search (value to search for)
 
-**GET /number/avg**: Returns the average of a list of numbers.
+Ex: /number/count?values=1,2,3,4,a,b,c,d,saman,
+kamal…n&search=saman
 
-Query parameter: `numbers` (comma-separated list)
-
-> Ex: /number/avg?numbers=1,2,3,4,5,6,6.....n
-
-**GET /number/sort**: Sorts a list of numbers.
-
-Query parameters: `numbers` (comma-separated list), `type` (asc|desc)
-
-> Ex: /number/sort?numbers=1,2,3,4,5,6.....n&type=asc
-> 
-> Ex: /number/sort?numbers=1,2,3,4,5,6.....n&type=dsc
-
-**GET /number/count**: Counts occurrences of a specific value in a list.
-
-Query parameters: `values` (comma-separated list), `search` (value to search for)
-
-> Ex: /number/count?values=1,2,3,4,a,b,c,d,saman,
-> kamal.....n&search=saman
-
-
-  
-
-## License
+License
 This project is licensed under the ISC License.
 
-
-## 💖Like my work?
-
-Additional Information This README file was generated using [StackEdit]([https://stackedit.io/app#](https://stackedit.io/app#)) and [README Generator]([https://readme-gen.vercel.app/app](https://readme-gen.vercel.app/app)).
+💖Like my work?
+Additional Information This README file was generated using StackEdit and README Generator.
