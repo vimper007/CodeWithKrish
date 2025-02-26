@@ -24,25 +24,25 @@ The `api-server/index.js` file sets up the following routes:
 
 **GET /number/min**: Returns the minimum of two numbers.
     Query parameters: `num1`, `num2`
-    **Ex: /number/min?num1=1&num2=2**
+    -**Ex: /number/min?num1=1&num2=2**
 
 **GET /number/max**: Returns the maximum of two numbers.
     Query parameters: `num1`, `num2`
-    **Ex: /number/max?num1=1&num2=2**
+    -**Ex: /number/max?num1=1&num2=2**
     
   
 **GET /number/avg**: Returns the average of a list of numbers.
      Query parameter: `numbers` (comma-separated list)
-    **Ex: /number/avg?numbers=1,2,3,4,5,6,6.....n**
+    -**Ex: /number/avg?numbers=1,2,3,4,5,6,6.....n**
   
 **GET /number/sort**: Sorts a list of numbers.
     Query parameters: `numbers` (comma-separated list), `type` (asc|desc)
-    **Ex: /number/sort?numbers=1,2,3,4,5,6.....n&type=asc**
-    **Ex: /number/sort?numbers=1,2,3,4,5,6.....n&type=dsc**
+    -**Ex: /number/sort?numbers=1,2,3,4,5,6.....n&type=asc**
+    -**Ex: /number/sort?numbers=1,2,3,4,5,6.....n&type=dsc**
   
 **GET /number/count**: Counts occurrences of a specific value in a list.
     Query parameters: `values` (comma-separated list), `search` (value to search for)
-    **Ex: /number/count?values=1,2,3,4,a,b,c,d,saman, kamal.....n&search=saman**
+    -**Ex: /number/count?values=1,2,3,4,a,b,c,d,saman, kamal.....n&search=saman**
 
 ## License
 
