@@ -1,3 +1,11 @@
+## Getting Started
+
+1. Clone the repository: **git clone https://github.com/vimper007/CodeWithKrish.git**
+2. Navigate to the project directory: **cd CodeWithKrish\node-js-practical\api-server**
+3. Install the required dependencies: **npm install**
+4. Start the server: **node index.js**
+5. The server will be running on `http://localhost:3000`.
+
 ## Utility Functions
 
 The `util.js` file exports the following functions:
@@ -35,14 +43,6 @@ The `api-server/index.js` file sets up the following routes:
 **GET /number/count**: Counts occurrences of a specific value in a list.
     Query parameters: `values` (comma-separated list), `search` (value to search for)
     **Ex: /number/count?values=1,2,3,4,a,b,c,d,saman, kamal.....n&search=saman**
-
-## Getting Started
-
-1. Clone the repository: **git clone https://github.com/vimper007/CodeWithKrish.git**
-2. Navigate to the project directory: **cd CodeWithKrish\node-js-practical\api-server**
-3. Install the required dependencies: **npm install**
-4. Start the server: **node index.js**
-5. The server will be running on `http://localhost:3000`.
 
 ## License
 
