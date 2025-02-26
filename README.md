@@ -3,6 +3,7 @@
 The `util.js` file exports the following functions:
 
 - **findMin(num1, num2)**: Returns the minimum of two numbers.
+- **findMax(num1, num2)**: Returns the maximum of two numbers.
 - **findAvg(numbers)**: Calculates and returns the average of an array of numbers.
 - **sortArray(numbers, type)**: Sorts an array of numbers in ascending or descending order based on the specified type.
 - **findValue(values, search)**: Counts the occurrences of a specific value in an array.
