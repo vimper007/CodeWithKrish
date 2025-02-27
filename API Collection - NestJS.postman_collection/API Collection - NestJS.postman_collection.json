@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "c78b28d2-0a94-4d3e-b5c2-b85b601f34d0",
+		"name": "API Collection - NestJS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34105812"
+	},
+	"item": [
+		{
+			"name": "Customer Service",
+			"item": [
+				{
+					"name": "Create Customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"kamal K\", \"email\": \"Kamalk@ma.com\", \"address\": \" LE CUBE, 130 High Level Rd, Colombo 00600\"}"
+						},
+						"url": "http://localhost:3001/customers"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3001/customers/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3001/customers"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Inventory Service",
+			"item": [
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Laptop\", \"price\": 1500, \"quantity\": 10}"
+						},
+						"url": "http://localhost:3002/inventory"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3002/inventory/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3002/inventory"
+					},
+					"response": []
+				},
+				{
+					"name": "Validate Stock",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/products/1/validate?quantity=5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"products",
+								"1",
+								"validate"
+							],
+							"query": [
+								{
+									"key": "quantity",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000"
+		}
+	]
+}
