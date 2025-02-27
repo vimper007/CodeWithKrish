@@ -115,7 +115,14 @@ Vimukthi Perera
 
 
 day2 ref
-https://orkhan.gitbook.io/typeorm/docs/find-options#advanced-options
+[https://orkhan.gitbook.io/typeorm/docs/find-options#advanced-options
+https://orkhan.gitbook.io/typeorm/docs/find-options
+https://www.tutorialspoint.com/typeorm/typeorm_quick_guide.htm
+https://github.com/typestack/class-validator#validation-decorators](https://orkhan.gitbook.io/typeorm/docs/find-options#advanced-options
 https://orkhan.gitbook.io/typeorm/docs/find-options
 https://www.tutorialspoint.com/typeorm/typeorm_quick_guide.htm
 https://github.com/typestack/class-validator#validation-decorators
+https://stackoverflow.com/questions/73247124/how-to-get-all-the-data-from-tables-using-typeorm
+https://www.geeksforgeeks.org/how-to-use-query-parameters-in-nestjs/
+https://stackoverflow.com/questions/54958244/how-to-use-query-parameters-in-nest-js
+https://www.youtube.com/watch?v=eSEUSUvaxw8)
