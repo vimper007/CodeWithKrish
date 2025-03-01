@@ -11,15 +11,15 @@ export class CustomerService {
     private readonly customerRepository: Repository<Customer>,
   ) {}
 
-  async createCustomer(customerDto:CustomerDto){
-    return this.customerRepository.save(customerDto)
+  async createCustomer(customerDto: CustomerDto) {
+    return this.customerRepository.save(customerDto);
   }
 
-  async findCustomerById(id:number){
-    return await this.customerRepository.findOneBy({id})
+  async findCustomerById(id: number) {
+    return await this.customerRepository.findOneBy({ id });
   }
 
-  async findAllCustomers(){
-    return await this.customerRepository.find()
+  async findAllCustomers() {
+    return await this.customerRepository.find();
   }
 }

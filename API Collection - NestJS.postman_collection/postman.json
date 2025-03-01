@@ -12,9 +12,7 @@
           "name": "Create Customer",
           "request": {
             "method": "POST",
-            "header": [
-              { "key": "Content-Type", "value": "application/json" }
-            ],
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
             "url": "{{base_url}}/customers",
             "body": {
               "mode": "raw",
@@ -45,9 +43,7 @@
           "name": "Create Product",
           "request": {
             "method": "POST",
-            "header": [
-              { "key": "Content-Type", "value": "application/json" }
-            ],
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
             "url": "{{base_url}}/products",
             "body": {
               "mode": "raw",
@@ -79,7 +75,5 @@
       ]
     }
   ],
-  "variable": [
-    { "key": "base_url", "value": "http://localhost:3000" }
-  ]
+  "variable": [{ "key": "base_url", "value": "http://localhost:3000" }]
 }

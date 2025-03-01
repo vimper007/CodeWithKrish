@@ -23,7 +23,7 @@ export class OrdersController {
   @Patch(":id/status")
   async updateOrderStatus(
     @Param("id") id: number,
-    @Body() updateOrderStatus: UpddateOrderStatus
+    @Body() updateOrderStatus: UpddateOrderStatus,
   ) {
     return this.orderService.updateOrderStatus(id, updateOrderStatus);
   }

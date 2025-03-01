@@ -16,7 +16,7 @@ export class OrdersService {
     @InjectRepository(Order)
     private readonly orderRepository: Repository<Order>,
     @InjectRepository(OrderItem)
-    private readonly orderItemRepository: Repository<OrderItem>
+    private readonly orderItemRepository: Repository<OrderItem>,
   ) {}
 
   async create(createOrderDto: CreateOrderDto): Promise<Order> {
@@ -34,7 +34,7 @@ export class OrdersService {
         price: item.price,
         quantity: item.quantity,
         order: savedOrder,
-      })
+      }),
     );
     await this.orderItemRepository.save(orderItems);
     const foundOrder = await this.orderRepository.findOne({
@@ -70,7 +70,7 @@ export class OrdersService {
       order.status === OrderStatus.CANCELLED
     ) {
       throw new BadRequestException(
-        `Order status cannot be changed when its deleivered or cancelled`
+        `Order status cannot be changed when its deleivered or cancelled`,
       );
     }
     order.status = updateStatus.status;
