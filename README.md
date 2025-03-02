@@ -107,3 +107,8 @@ https://stackoverflow.com/questions/73247124/how-to-get-all-the-data-from-tables
 https://www.geeksforgeeks.org/how-to-use-query-parameters-in-nestjs/
 https://stackoverflow.com/questions/54958244/how-to-use-query-parameters-in-nest-js
 https://www.youtube.com/watch?v=eSEUSUvaxw8)
+
+
+day3 ref
+https://stackoverflow.com/questions/71703436/how-to-make-calls-to-services-dynamic-depending-on-parameters-passed
+https://docs.nestjs.com/techniques/http-module
