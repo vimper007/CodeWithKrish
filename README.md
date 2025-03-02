@@ -117,3 +117,5 @@ https://docs.nestjs.com/pipes
 https://tanstack.com/query/latest/docs/framework/react/quick-start
 https://refine.dev/blog/react-query-guide/
 https://refine.dev/blog/react-query-guide/#performing-basic-data-fetching
+https://stackoverflow.com/questions/71703436/how-to-make-calls-to-services-dynamic-depending-on-parameters-passed
+https://docs.nestjs.com/techniques/http-module
