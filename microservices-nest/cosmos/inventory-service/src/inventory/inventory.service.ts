@@ -27,7 +27,7 @@ export class InventoryService {
     const product = await this.inventoryRepository.findOneBy({ id });
     return {
       available:
-        product?.quantity && product?.quantity > quantity ? true : false,
+        product?.quantity && product?.quantity >= quantity ? true : false,
     };
   }
 

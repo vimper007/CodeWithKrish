@@ -14,6 +14,8 @@ import { DataSource } from "typeorm";
 
 @Injectable()
 export class OrdersService {
+  customerServiceBaseUrl = 'http://localhost:3002/customers'
+  inventoryServiceBaseUrl= 'http://localhost:3001/inventory'
   constructor(
     @InjectRepository(Order)
     private readonly orderRepository: Repository<Order>,
@@ -42,7 +44,7 @@ export class OrdersService {
     // Extracts customerId and items from createOrderDto.`
     const { customerId, items } = createOrderDto;
     // Fetches customer details from the customer service.
-    const response = await this.httpService.axiosRef.get(`http://localhost:3002/customers/${customerId}`)
+    const response = await this.httpService.axiosRef.get(`${this.customerServiceBaseUrl}/${customerId}`)
     if(!response.data) throw new NotFoundException(`Customer with ${customerId} not found!`)
 
       
@@ -52,8 +54,8 @@ export class OrdersService {
       try {
       // Validate Quantity
       for(const item of items){
-        const  stockResponse = await this.httpService.axiosRef.get(`http://localhost:3001/inventory/${item.productId}/validate?quantity=${item.quantity}`)
-        console.log(response.data)
+        const  stockResponse = await this.httpService.axiosRef.get(`${this.inventoryServiceBaseUrl}/${item.productId}/validate?quantity=${item.quantity}`)
+        console.log('response order service',stockResponse.data)
         if (!stockResponse.data.available) throw new BadRequestException(`Insufficient stock for product ${item.productId} or product not found!`);
         if(!stockResponse.data) throw new BadRequestException(`Bad Endpoint!`)
       }

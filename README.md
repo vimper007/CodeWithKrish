@@ -119,3 +119,7 @@ https://refine.dev/blog/react-query-guide/
 https://refine.dev/blog/react-query-guide/#performing-basic-data-fetching
 https://stackoverflow.com/questions/71703436/how-to-make-calls-to-services-dynamic-depending-on-parameters-passed
 https://docs.nestjs.com/techniques/http-module
+https://primereact.org/datatable/
+https://mycolor.space/gradient
+https://orkhan.gitbook.io/typeorm/docs/validation
+https://docs.nestjs.com/techniques/validation

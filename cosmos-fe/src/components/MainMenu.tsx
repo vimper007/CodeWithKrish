@@ -15,48 +15,20 @@ export function MainMenu() {
       command: () => navigate("/order-management"),
     },
     {
-      label: "Customers",
+      label: "Customer Management",
       icon: "pi pi-search",
-      path: "/customers",
-      command: () => navigate("/customers"),
-      // items: [
-      //     {
-      //         label: 'Components',
-      //         icon: 'pi pi-bolt'
-      //     },
-      //     {
-      //         label: 'Blocks',
-      //         icon: 'pi pi-server'
-      //     },
-      //     {
-      //         label: 'UI Kit',
-      //         icon: 'pi pi-pencil'
-      //     },
-      //     {
-      //         label: 'Templates',
-      //         icon: 'pi pi-palette',
-      //         items: [
-      //             {
-      //                 label: 'Apollo',
-      //                 icon: 'pi pi-palette'
-      //             },
-      //             {
-      //                 label: 'Ultima',
-      //                 icon: 'pi pi-palette'
-      //             }
-      //         ]
-      //     }
-      // ]
+      command: () => navigate("/customer-management"),
     },
     {
-      label: "Contact",
-      icon: "pi pi-envelope",
-    },
+      label: "Product Management",
+      icon:"",
+      command: () => navigate("/product-management"),
+    }
   ];
 
   return (
-    <div className="card">
-      <Menubar model={items} />
+    <div className="card bg-slate-400">
+      <Menubar model={items} className="bg-slate-400"/>
     </div>
   );
 }
