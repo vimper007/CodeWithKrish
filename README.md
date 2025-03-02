@@ -107,3 +107,13 @@ https://stackoverflow.com/questions/73247124/how-to-get-all-the-data-from-tables
 https://www.geeksforgeeks.org/how-to-use-query-parameters-in-nestjs/
 https://stackoverflow.com/questions/54958244/how-to-use-query-parameters-in-nest-js
 https://www.youtube.com/watch?v=eSEUSUvaxw8)
+
+day3 ref
+https://dev.to/joodi/fetching-data-with-axios-in-nextjs-15-a-complete-guide-hed
+https://docs.nestjs.com/techniques/http-module
+https://aditya003-ay.medium.com/transactions-and-locks-in-sequelize-a127c27bb0e9
+https://medium.com/@dev.muhammet.ozen/advanced-transaction-management-with-nestjs-typeorm-43a839363491
+https://docs.nestjs.com/pipes
+https://tanstack.com/query/latest/docs/framework/react/quick-start
+https://refine.dev/blog/react-query-guide/
+https://refine.dev/blog/react-query-guide/#performing-basic-data-fetching

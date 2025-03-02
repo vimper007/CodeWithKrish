@@ -3,6 +3,7 @@ import { Column } from 'typeorm';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CustomerModule } from './customer/customer.module';
 import { Customer } from './customer/entity/customer.entity';
+import { CustomerService } from './customer/customer.service';
 
 @Module({
   imports: [

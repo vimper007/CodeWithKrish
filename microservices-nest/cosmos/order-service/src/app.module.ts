@@ -4,6 +4,7 @@ import { OrdersModule } from "./orders/orders.module";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { Order } from "./orders/entity/order.entitiy";
 import { OrderItem } from "./orders/entity/oreder-item.entitiy";
+import { HttpModule } from "@nestjs/axios";
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { OrderItem } from "./orders/entity/oreder-item.entitiy";
       synchronize: true, //not in prod only dev
     }),
     OrdersModule,
+    HttpModule
   ],
 })
 export class AppModule {}

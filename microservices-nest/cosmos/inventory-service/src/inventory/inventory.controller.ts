@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post, Query } from '@nestjs/common';
+import { Body, Controller, Get, Param, ParseIntPipe, Patch, Post, Put, Query } from '@nestjs/common';
 import { InventoryService } from './inventory.service';
 import { Inventory } from './entity/inventory.entity';
 import { InventoryDto } from './dto/inventory.dto';
@@ -32,5 +32,14 @@ export class InventoryController {
     @Query('quantity') quantity: number,
   ) {
     return await this.inventoryService.validateStock(id, quantity);
+  }
+
+  @Patch(':id/reduce')
+  async reduceStock(
+    @Param('id', ParseIntPipe) id: number,
+    @Query('quantity', ParseIntPipe) quantity: number,
+  ) {
+    console.log(id,quantity)
+     await this.inventoryService.reduceStock(id, quantity);
   }
 }

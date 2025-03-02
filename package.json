@@ -19,8 +19,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@nestjs/axios": "^4.0.0",
     "@nestjs/cli": "^11.0.5",
+    "axios": "^1.8.1",
     "express": "^4.21.2",
-    "js-practical": "file:"
+    "js-practical": "file:",
+    "react-icons": "^5.5.0"
   }
 }

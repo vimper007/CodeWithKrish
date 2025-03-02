@@ -18,7 +18,7 @@ export function MainMenu() {
       label: "Customers",
       icon: "pi pi-search",
       path: "/customers",
-      command: () => navigate("/order-management"),
+      command: () => navigate("/customers"),
       // items: [
       //     {
       //         label: 'Components',

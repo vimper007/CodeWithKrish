@@ -6,6 +6,9 @@ import { FloatLabel } from "primereact/floatlabel";
 import { TreeTable } from "primereact/treetable";
 import { Column } from "primereact/column";
 import { DataTable } from "primereact/datatable";
+import { useMutation, useQuery } from "@tanstack/react-query";
+import { RiDeleteBin7Fill } from "react-icons/ri";
+import { MdEdit } from "react-icons/md";
 const OrderManagement = () => {
   const [customerId, setCustomerId] = useState<string>("");
   const [productId, setProductId] = useState<string>("");
@@ -13,15 +16,15 @@ const OrderManagement = () => {
   const [quantity, setQuantity] = useState<string>("");
   const [orders, setOrders] = useState<any>([]);
   const [nodes, setNodes] = useState([]);
-  useEffect(() => {
-    const fetchOrders = async () => {
-      const orders = await getOrders();
-      if (orders) setOrders(orders);
-      return;
-    };
-    fetchOrders();
-  }, []);
 
+  const { data: customers } = useQuery({
+    queryKey: ["customer"],
+    queryFn: getOrders,
+  });
+
+  const {data:ordersData} = useMutation({
+    mutationFn:createOrder
+  })
   useEffect(() => {
     setNodes(orders);
   }, [orders]);
@@ -40,20 +43,32 @@ const OrderManagement = () => {
     };
     createOrder(order);
   };
+
+  const renderActions = () => (
+    <div className="flex gap-2">
+      <Button severity="warning" className="flex gap-1 justify-center">
+        Edit <MdEdit />
+      </Button>
+      <Button severity="danger" className="flex gap-1 justify-center">
+        Delete <RiDeleteBin7Fill />{" "}
+      </Button>
+    </div>
+  );
   return (
-    <>
-      <div className="">
-        <h1 className="text-2xl text-red-800">Order Management</h1>
-        <h2 className="text-green-700">Create Order</h2>
+      <div className="flex flex-col">
+        <h1 className="text-5xl mt-10 mx-auto text-white">
+          Order Management
+        </h1>
+        <h2 className="mx-auto text-white">Create Order</h2>
         <form
-          className="flex flex-col w-[30%] mx-auto gap-10"
+          className="flex flex-col  gap-10 mt-10 mx-auto"
           onSubmit={handleSubmit}
         >
           <FloatLabel>
             <label htmlFor="customerId">Customer Id</label>
             <InputText
               value={customerId?.toString()}
-              onChange={(e) => setCustomerId(Number(e.target.value))}
+              onChange={(e) => setCustomerId(e.target.value)}
               id="customerId"
             ></InputText>
           </FloatLabel>
@@ -62,7 +77,7 @@ const OrderManagement = () => {
             <label htmlFor="productId">Product Id</label>
             <InputText
               value={productId?.toString()}
-              onChange={(e) => setProductId(Number(e.target.value))}
+              onChange={(e) => setProductId(e.target.value)}
               id="productId"
             ></InputText>
           </FloatLabel>
@@ -79,23 +94,29 @@ const OrderManagement = () => {
             <label htmlFor="quantity">Quantity</label>
             <InputText
               value={quantity?.toString()}
-              onChange={(e) => setQuantity(Number(e.target.value))}
+              onChange={(e) => setQuantity(e.target.value)}
               id="quantity"
             ></InputText>
           </FloatLabel>
 
           <Button label="Submit" />
         </form>
+        <h2 className="text-3xl mx-auto text-white mt-20">Orders</h2>
+
+        <div className="card mt-10 mx-30">
+          <DataTable value={customers?.data} tableStyle={{ minWidth: "10rem" }}>
+            <Column field="id" header="ID"></Column>
+            <Column field="customerId" header="Customer ID"></Column>
+            <Column field="createdAt" header="Created At"></Column>
+            <Column field="status" header="Status"></Column>
+            <Column
+              field="actions"
+              header="Actions"
+              body={renderActions}
+            ></Column>
+          </DataTable>
+        </div>
       </div>
-      <div className="card">
-        <DataTable value={nodes.data} tableStyle={{ minWidth: "10rem" }}>
-          <Column field="id" header="ID"></Column>
-          <Column field="customerId" header="Customer ID"></Column>
-          <Column field="createdAt" header="Created At"></Column>
-          <Column field="status" header="Status"></Column>
-        </DataTable>
-      </div>
-    </>
   );
 };
 
