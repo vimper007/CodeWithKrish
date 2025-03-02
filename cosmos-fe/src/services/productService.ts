@@ -1,8 +1,8 @@
 import axios from "axios";
 import toast from "react-hot-toast";
-import { successToastStyles } from "../utils/common";
+import { errorToastStyles, successToastStyles } from "../utils/common";
 
-const productUrl = "http://localhost:3002/customers";
+const productUrl = "http://localhost:3001/inventory";
 
 export const createProduct = async(product:any) => {
     try {
@@ -12,6 +12,11 @@ export const createProduct = async(product:any) => {
         // }
         toast.success("Product created successfully"),{...successToastStyles};
     } catch (error) {
-        
+        if(axios.isAxiosError(error)){
+            toast.error(error.response?.data.message ?? error.response?.data ?? 'Cannot connect to the server at this time...',{...errorToastStyles});
+        }else{
+
+            toast.error(error.message),{...errorToastStyles};
+        }
     }
 }

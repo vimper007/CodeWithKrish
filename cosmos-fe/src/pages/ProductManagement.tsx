@@ -10,6 +10,7 @@ import { RiDeleteBin7Fill } from "react-icons/ri";
 import { MdEdit } from "react-icons/md";
 import { Tag } from "primereact/tag";
 import { getSeverity, productPageBackground } from "../utils/common";
+import { createProduct } from "../services/productService";
 const ProductManagement = () => {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
@@ -21,8 +22,8 @@ const ProductManagement = () => {
     queryFn: getOrders,
   });
 
-  const { data: ordersData } = useMutation({
-    mutationFn: createOrder,
+  const { data: ordersData, mutate:productMutation } = useMutation({
+    mutationFn: createProduct,
   });
   //   useEffect(() => {
   //     setNodes(orders);
@@ -35,7 +36,7 @@ const ProductManagement = () => {
         price,
         quantity
       };
-      createOrder(item);
+      productMutation(item);
     };
   const statusBodyTemplate = (product: any) => {
     return (
