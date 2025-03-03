@@ -1,4 +1,4 @@
-import { BadRequestException, Body, Injectable, NotFoundException } from '@nestjs/common';
+import { BadRequestException, Body, Injectable, NotFoundException, OnModuleInit } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { InventoryDto } from './dto/inventory.dto';
 import { Repository } from 'typeorm';

@@ -76,7 +76,7 @@ const ProductManagement = () => {
         <FloatLabel>
           <label htmlFor="price">Price</label>
           <InputText
-            value={price?.toString()}
+            value={price}
             onChange={(e) => setPrice(e.target.value)}
             id="price"
           ></InputText>
@@ -84,7 +84,7 @@ const ProductManagement = () => {
         <FloatLabel>
           <label htmlFor="quantity">Quantity</label>
           <InputText
-            value={quantity?.toString()}
+            value={quantity}
             onChange={(e) => setQuantity(e.target.value)}
             id="quantity"
           ></InputText>
