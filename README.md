@@ -123,3 +123,10 @@ https://primereact.org/datatable/
 https://mycolor.space/gradient
 https://orkhan.gitbook.io/typeorm/docs/validation
 https://docs.nestjs.com/techniques/validation
+
+
+
+
+day4 ref
+https://docs.nestjs.com/cli/usages
+https://stackoverflow.com/questions/31061781/what-command-shows-all-of-the-topics-and-offsets-of-partitions-in-kafka
