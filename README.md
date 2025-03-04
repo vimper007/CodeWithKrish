@@ -123,3 +123,14 @@ https://primereact.org/datatable/
 https://mycolor.space/gradient
 https://orkhan.gitbook.io/typeorm/docs/validation
 https://docs.nestjs.com/techniques/validation
+
+
+
+
+day4 ref
+https://medium.com/@kanishkanaik97/integrating-apache-kafka-in-nestjs-22860a35cbe9
+https://docs.nestjs.com/cli/usages
+https://stackoverflow.com/questions/31061781/what-command-shows-all-of-the-topics-and-offsets-of-partitions-in-kafka
+https://stackoverflow.com/questions/71249344/use-kafkajs-admin-client-trough-nestjs-microservices-module
+https://www.redpanda.com/guides/kafka-performance-kafka-rebalancing
+https://stackoverflow.com/questions/56647442/kafka-keeps-rebalancing-consumers
